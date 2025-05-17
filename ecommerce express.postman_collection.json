@@ -1,0 +1,3325 @@
+{
+	"info": {
+		"_postman_id": "eb2463a2-61b1-4cd4-aed6-907d431a5e13",
+		"name": "ecommerce express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39462459"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "adham",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "hussien",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "adhamh666@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "cPassword",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "DOB",
+									"value": "2000-5-1",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01066917499",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "user",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "alex",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/N:/assets/tree_fall.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user/signUp",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirm email",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"adhamh666@gmail.com\",\r\n    \"otp\":\"5710\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/confirmEmail",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"confirmEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"adhamh666@gmail.com\",\r\n    \"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/logIn",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"logIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotpassword",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk0ZjAzM2E3ZTkxZmFkY2NhODU5NiIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ0MTMyMCwiZXhwIjoxNzQ2MDQ2MTIwfQ.6wbeZjak7jE9aQhxzUldbVwgWZmCitF1I1haOxTZYvM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"adhamh666@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/forgotPassword",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetpassword",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk0ZjAzM2E3ZTkxZmFkY2NhODU5NiIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ0MTMyMCwiZXhwIjoxNzQ2MDQ2MTIwfQ.6wbeZjak7jE9aQhxzUldbVwgWZmCitF1I1haOxTZYvM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"adhamh666@gmail.com\",\r\n    \"otp\":\"9194\",\r\n    \"password\":\"1122334455\",\r\n    \"cPassword\":\"1122334455\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/resetPassword",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk1OWQ1YTU3NmI1MzcxZTczNWU2NyIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ0NDUwNywiZXhwIjoxNzQ2MDQ5MzA3fQ.9v08X2bnANdnhFtoBbdz4bTJvOG_mjCd4X8_FaaZai4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/getProfile",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"getProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk1OWQ1YTU3NmI1MzcxZTczNWU2NyIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ0NDkyNywiZXhwIjoxNzQ2MDQ5NzI3fQ.zbLwNv9VaYEgGr2TOQG2nxnnHhA-BBVzlpOSorF_8Rc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"1234567899\",\r\n    \"newPassword\":\"123456789\",\r\n    \"cPassword\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/changePassword",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update profile",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk1OWQ1YTU3NmI1MzcxZTczNWU2NyIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ0NTA2MCwiZXhwIjoxNzQ2MDQ5ODYwfQ.7nFNdlh42i_wSGUney7RyMhMtyLSGSxgEvbR6ewAp1E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\":\"alex\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/updateProfile",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateprofilepictre",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk1OWQ1YTU3NmI1MzcxZTczNWU2NyIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2MDY0NCwiZXhwIjoxNzQ2MDY1NDQ0fQ.h1bajmFFCB5o6cS4_zSMbSwwTYiOHDLTyfeyHU44H-s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/alamy/Desktop/Screenshot 2025-04-13 182828.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user/updateProfilePicture",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"updateProfilePicture"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteprofilepicture",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk1OWQ1YTU3NmI1MzcxZTczNWU2NyIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2MDY0NCwiZXhwIjoxNzQ2MDY1NDQ0fQ.h1bajmFFCB5o6cS4_zSMbSwwTYiOHDLTyfeyHU44H-s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/deleteProfilepic",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"deleteProfilepic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk1OWQ1YTU3NmI1MzcxZTczNWU2NyIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2MDY0NCwiZXhwIjoxNzQ2MDY1NDQ0fQ.h1bajmFFCB5o6cS4_zSMbSwwTYiOHDLTyfeyHU44H-s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/hardDelete/6809a059f42ef00f276bf272",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"hardDelete",
+								"6809a059f42ef00f276bf272"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "banuser",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk1OWQ1YTU3NmI1MzcxZTczNWU2NyIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2MDY0NCwiZXhwIjoxNzQ2MDY1NDQ0fQ.h1bajmFFCB5o6cS4_zSMbSwwTYiOHDLTyfeyHU44H-s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/banUser/6809a2c6550a4cf44e9bc5c2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"banUser",
+								"6809a2c6550a4cf44e9bc5c2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unbanuser",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDk1OWQ1YTU3NmI1MzcxZTczNWU2NyIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2MDY0NCwiZXhwIjoxNzQ2MDY1NDQ0fQ.h1bajmFFCB5o6cS4_zSMbSwwTYiOHDLTyfeyHU44H-s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/unbanUser/6809a2c6550a4cf44e9bc5c2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"unbanUser",
+								"6809a2c6550a4cf44e9bc5c2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getuserdata",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "approve vendor",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjAxMzI0OCwiZXhwIjoxNzQ2NjE4MDQ4fQ.au2PjeWBgNxvygEExs6Eysrl_ns90I09opNdPuRYQf4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/aproveVendor/68120bd68a94eba4290b6c50",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"aproveVendor",
+								"68120bd68a94eba4290b6c50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change to admin",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTFmY2ZiZGVhZjc4YjVkMTJjMzhiMSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjAwOTU3MywiZXhwIjoxNzQ2NjE0MzczfQ.dz-VouNaHh34_E7zGgizQeUKh7Qg_rqGBF1SQrdgMLU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/changeToAdmin/68120123d36618d6c4edc2e2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"changeToAdmin",
+								"68120123d36618d6c4edc2e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTFmY2ZiZGVhZjc4YjVkMTJjMzhiMSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjAwOTU3MywiZXhwIjoxNzQ2NjE0MzczfQ.dz-VouNaHh34_E7zGgizQeUKh7Qg_rqGBF1SQrdgMLU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/getAllUsers?search=rafaat",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"getAllUsers"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "rafaat"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllDeletedUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTFmY2ZiZGVhZjc4YjVkMTJjMzhiMSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjAwOTU3MywiZXhwIjoxNzQ2NjE0MzczfQ.dz-VouNaHh34_E7zGgizQeUKh7Qg_rqGBF1SQrdgMLU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/getAllDeletedUsers",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"getAllDeletedUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBanneddUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjAxMzI0OCwiZXhwIjoxNzQ2NjE4MDQ4fQ.au2PjeWBgNxvygEExs6Eysrl_ns90I09opNdPuRYQf4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/getAllBanneddUsers",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"getAllBanneddUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllVendorsrequests",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjAxMzI0OCwiZXhwIjoxNzQ2NjE4MDQ4fQ.au2PjeWBgNxvygEExs6Eysrl_ns90I09opNdPuRYQf4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/getAllVendorsrequests",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"getAllVendorsrequests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllVendors",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjAxMzI0OCwiZXhwIjoxNzQ2NjE4MDQ4fQ.au2PjeWBgNxvygEExs6Eysrl_ns90I09opNdPuRYQf4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/getAllVendors",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"getAllVendors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search store by name",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "addCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "electronics mobike",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "ay hagaaaaaaaaa",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/alamy/Desktop/Screenshot 2025-04-13 182828.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/category/createCategory",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"createCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "domz",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/adhamm.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/category/updateCategory/6809c091a50a580e5fa97d18",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"updateCategory",
+								"6809c091a50a580e5fa97d18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCategory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/category/getCategory?page=1&limit=3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"getCategory"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliYWNkOWJiZWI3MjZkMDJkMGExNSIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDU0NjgxMzgsImV4cCI6MTc0NjA3MjkzOH0.ZpE8ZIM7g9BPfGu-IuqhWpnmCX7NdFXgRdtieKDNLUs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/category/getCategoryById/6809c0d75c760a2d927ef5e6",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"getCategoryById",
+								"6809c0d75c760a2d927ef5e6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliYWNkOWJiZWI3MjZkMDJkMGExNSIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDU0NjgxMzgsImV4cCI6MTc0NjA3MjkzOH0.ZpE8ZIM7g9BPfGu-IuqhWpnmCX7NdFXgRdtieKDNLUs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "mobikeeeeeesr",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/category/searchCategoryByName?page=2&limit=2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"searchCategoryByName"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "softdelete",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/category/softDeleteCategory/6809c091a50a580e5fa97d18",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"softDeleteCategory",
+								"6809c091a50a580e5fa97d18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restore category",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/category/restoreCategory/6809c091a50a580e5fa97d18",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"restoreCategory",
+								"6809c091a50a580e5fa97d18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/category/deleteCategory/6809c091a50a580e5fa97d18",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"deleteCategory",
+								"6809c091a50a580e5fa97d18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/category/deleteCategoryImage/6809c0d75c760a2d927ef5e6",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"deleteCategoryImage",
+								"6809c0d75c760a2d927ef5e6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete all category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/category/deleteAllCategories",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"deleteAllCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category count",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get all deleted categories",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subcategory",
+			"item": [
+				{
+					"name": "addsubcategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "mobile",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "680aa9a4a7f4f1f7d2a8a7a6",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/N:/mobile.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/subcategory/addSubcategory",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"addSubcategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatesubcategory",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "mobileees",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "680aa9a4a7f4f1f7d2a8a7a6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/subcategory/updateSubCategory/680aaafc41e94f95ea06bb0a",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"updateSubCategory",
+								"680aaafc41e94f95ea06bb0a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllSubCategory",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "softdelete subcategory",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/subcategory/softDeleteSubCategory/680abc262c5340d5819c8adf",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"softDeleteSubCategory",
+								"680abc262c5340d5819c8adf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restore subcategory",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/subcategory/restoreSubCategory/680abc262c5340d5819c8adf",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"restoreSubCategory",
+								"680abc262c5340d5819c8adf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete subcategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/subcategory/deleteSubCategory/680abc262c5340d5819c8adf",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"deleteSubCategory",
+								"680abc262c5340d5819c8adf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSubCategoryById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliYWNkOWJiZWI3MjZkMDJkMGExNSIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDU0NjgxMzgsImV4cCI6MTc0NjA3MjkzOH0.ZpE8ZIM7g9BPfGu-IuqhWpnmCX7NdFXgRdtieKDNLUs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/subcategory/getSubCategoryById/680ebcad8a80f2475d43a22d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"getSubCategoryById",
+								"680ebcad8a80f2475d43a22d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete subcategory image",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/subcategory/deleteSubCategoryImage/680ebcad8a80f2475d43a22d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"deleteSubCategoryImage",
+								"680ebcad8a80f2475d43a22d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addSubCategoryImage",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/N:/mobile.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/subcategory/addSubCategoryImage/680ebcad8a80f2475d43a22d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"addSubCategoryImage",
+								"680ebcad8a80f2475d43a22d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSubCategoryCount",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/subcategory/getSubCategoryCount",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"getSubCategoryCount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchSubCategory",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete all subcategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/subcategory/deleteAllSubCategories",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"deleteAllSubCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "soft delete many subcategory",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids\":[\"681007de54ba23a15f6ceaa5\",\"681007e454ba23a15f6ceaac\",\"681007e954ba23a15f6ceab3\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/subcategory/softDeleteMany",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"softDeleteMany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restore many subcategory",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids\":[\"681007de54ba23a15f6ceaa5\",\"681007e454ba23a15f6ceaac\",\"681007e954ba23a15f6ceab3\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/subcategory/restoreMany",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"restoreMany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dublicate subcategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDliOTJjNWU5ZDMyMTRjYzBlZjRkNSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTQ2Nzc3NSwiZXhwIjoxNzQ2MDcyNTc1fQ.ShWKmbEpnypPjDsHw-L8fZUnIfuhYhMs3xQkDxNqo9k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/subcategory/duplicateSubCategory/681007de54ba23a15f6ceaa5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"duplicateSubCategory",
+								"681007de54ba23a15f6ceaa5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ai suggest",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjAxMzI0OCwiZXhwIjoxNzQ2NjE4MDQ4fQ.au2PjeWBgNxvygEExs6Eysrl_ns90I09opNdPuRYQf4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/subcategory/ai/suggest?categoryname=Home",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"ai",
+								"suggest"
+							],
+							"query": [
+								{
+									"key": "categoryname",
+									"value": "Home"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleted subcategory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjAxMzI0OCwiZXhwIjoxNzQ2NjE4MDQ4fQ.au2PjeWBgNxvygEExs6Eysrl_ns90I09opNdPuRYQf4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/subcategory/trash",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"subcategory",
+								"trash"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "brand",
+			"item": [
+				{
+					"name": "addBrand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTE0ZTA5MDZiYWQwZDdhOTg5NzUzNCIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTk2NDYyMiwiZXhwIjoxNzQ2NTY5NDIyfQ.mwsYfcKLdbdbKD9K2mqLyRE5qlVxU-WTrmfw-uMxdgA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "apple",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "68114f1cb03c298c23d618ab",
+									"type": "text"
+								},
+								{
+									"key": "subcategory",
+									"value": "68114f56b03c298c23d618b0",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/N:/apple.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/brand/addBrand",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"addBrand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get brand by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTE0ZThlYjAzYzI5OGMyM2Q2MThhMiIsImVtYWlsIjoicmFhZmF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDU5NjQ3NDIsImV4cCI6MTc0NjU2OTU0Mn0.v7eS7t6dm1U0KX1OgnmmK5JY4wwUAj9x7D0Aw4a90mA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/brand/getBrandById/68115118fe9de3824c9730b9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"getBrandById",
+								"68115118fe9de3824c9730b9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateBrand",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTE0ZTA5MDZiYWQwZDdhOTg5NzUzNCIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTk2NDYyMiwiZXhwIjoxNzQ2NTY5NDIyfQ.mwsYfcKLdbdbKD9K2mqLyRE5qlVxU-WTrmfw-uMxdgA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "apple",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "categoryId",
+									"value": "68114f1cb03c298c23d618ab",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "subcategoryId",
+									"value": "68114f56b03c298c23d618b0",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/N:/apple.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/brand/updateBrand/68115118fe9de3824c9730b9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"updateBrand",
+								"68115118fe9de3824c9730b9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "soft delete brand",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTE0ZTA5MDZiYWQwZDdhOTg5NzUzNCIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTk2NDYyMiwiZXhwIjoxNzQ2NTY5NDIyfQ.mwsYfcKLdbdbKD9K2mqLyRE5qlVxU-WTrmfw-uMxdgA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/brand/softDeleteBrand/68115118fe9de3824c9730b9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"softDeleteBrand",
+								"68115118fe9de3824c9730b9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restore brand",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTE0ZTA5MDZiYWQwZDdhOTg5NzUzNCIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTk2NDYyMiwiZXhwIjoxNzQ2NTY5NDIyfQ.mwsYfcKLdbdbKD9K2mqLyRE5qlVxU-WTrmfw-uMxdgA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/brand/restoreBrand/68115118fe9de3824c9730b9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"restoreBrand",
+								"68115118fe9de3824c9730b9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete brand logo",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTE0ZTA5MDZiYWQwZDdhOTg5NzUzNCIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTk2NDYyMiwiZXhwIjoxNzQ2NTY5NDIyfQ.mwsYfcKLdbdbKD9K2mqLyRE5qlVxU-WTrmfw-uMxdgA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/brand/deleteBrandImage/68115118fe9de3824c9730b9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"deleteBrandImage",
+								"68115118fe9de3824c9730b9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add brand logo",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTE0ZTA5MDZiYWQwZDdhOTg5NzUzNCIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTk2NDYyMiwiZXhwIjoxNzQ2NTY5NDIyfQ.mwsYfcKLdbdbKD9K2mqLyRE5qlVxU-WTrmfw-uMxdgA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/N:/apple.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/brand/addBrandImage/68115118fe9de3824c9730b9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"addBrandImage",
+								"68115118fe9de3824c9730b9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete brand",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTE0ZTA5MDZiYWQwZDdhOTg5NzUzNCIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTk2NDYyMiwiZXhwIjoxNzQ2NTY5NDIyfQ.mwsYfcKLdbdbKD9K2mqLyRE5qlVxU-WTrmfw-uMxdgA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/brand/deleteBrand/68115118fe9de3824c9730b9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"deleteBrand",
+								"68115118fe9de3824c9730b9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all brand",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTE0ZThlYjAzYzI5OGMyM2Q2MThhMiIsImVtYWlsIjoicmFhZmF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDU5NjQ3NDIsImV4cCI6MTc0NjU2OTU0Mn0.v7eS7t6dm1U0KX1OgnmmK5JY4wwUAj9x7D0Aw4a90mA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/brand/getAllBrands?page=2&limit=3&search=s",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"getAllBrands"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "search",
+									"value": "s"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all deleted brands",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTE0ZTA5MDZiYWQwZDdhOTg5NzUzNCIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTk2NDYyMiwiZXhwIjoxNzQ2NTY5NDIyfQ.mwsYfcKLdbdbKD9K2mqLyRE5qlVxU-WTrmfw-uMxdgA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/brand/getAllDeletedBrands",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"getAllDeletedBrands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbrandcount",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTE0ZTA5MDZiYWQwZDdhOTg5NzUzNCIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTk2NDYyMiwiZXhwIjoxNzQ2NTY5NDIyfQ.mwsYfcKLdbdbKD9K2mqLyRE5qlVxU-WTrmfw-uMxdgA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/brand/getbrandCount",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"getbrandCount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "softDeleteManyBrand",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTE0ZTA5MDZiYWQwZDdhOTg5NzUzNCIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTk2NDYyMiwiZXhwIjoxNzQ2NTY5NDIyfQ.mwsYfcKLdbdbKD9K2mqLyRE5qlVxU-WTrmfw-uMxdgA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids\":[\"681151d4e928f920cbdcc059\",\"681151e2e928f920cbdcc060\",\"6811c175c3c95471fef91d06\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/brand/softDeleteManyBrands",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"softDeleteManyBrands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restoreManyBrands",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTE0ZTA5MDZiYWQwZDdhOTg5NzUzNCIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NTk2NDYyMiwiZXhwIjoxNzQ2NTY5NDIyfQ.mwsYfcKLdbdbKD9K2mqLyRE5qlVxU-WTrmfw-uMxdgA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids\":[\"681151d4e928f920cbdcc059\",\"681151e2e928f920cbdcc060\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/brand/restoreManyBrands",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"brand",
+								"restoreManyBrands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "export brand",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "addProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "iphone 163sssss",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "8 ram 512 rom",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "discount",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "6813acefe8266809fe082e46",
+									"type": "text"
+								},
+								{
+									"key": "subcategory",
+									"value": "6813bcf0d44d904b14a323c3",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "6813d607bf528f4270920a6c",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/N:/mobile.jpeg"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/N:/download.jpeg",
+										"/N:/apple.jpeg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/product/addProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "approveProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/product/approveProduct/681412434719023201cea6d9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"approveProduct",
+								"681412434719023201cea6d9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "regect product",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/product/rejectProduct/6815960bb503f9ead0774702",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"rejectProduct",
+								"6815960bb503f9ead0774702"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "soft delete product",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/product/softdeleteProduct/6815960bb503f9ead0774702",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"softdeleteProduct",
+								"6815960bb503f9ead0774702"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restore produt",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "vendor eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTQwNDExODU1MThjZjQ3ZjhlNTgxZCIsImVtYWlsIjoibW9oYW1lZGxvdXRmeTE2NEBnbWFpbC5jb20iLCJpYXQiOjE3NDYxNDIzMTAsImV4cCI6MTc0Njc0NzExMH0.8haSVCS7JZmH1LlR-NvbsPyBtAovewq4X7dZ9WTgcvA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/product/restoreProduct/6815960bb503f9ead0774702",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"restoreProduct",
+								"6815960bb503f9ead0774702"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/product/deleteProduct/6815960bb503f9ead0774702",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"deleteProduct",
+								"6815960bb503f9ead0774702"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updated product",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\":\"50\",\r\n    \"discount\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/product/updateProduct/6815960bb503f9ead0774702",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"updateProduct",
+								"6815960bb503f9ead0774702"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "approve update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/product/approveUpdate/6815960bb503f9ead0774702",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"approveUpdate",
+								"6815960bb503f9ead0774702"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reject update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/product/rejectUpdate/6815960bb503f9ead0774702",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"rejectUpdate",
+								"6815960bb503f9ead0774702"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all pending updates",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/product/getpendingUpdates?search=",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"getpendingUpdates"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProductsRequests",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/product/getAllProductsRequests?search=s",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"getAllProductsRequests"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "s"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllRejectedProducts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/product/getAllRejectedProducts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"getAllRejectedProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/product/getAllProducts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"getAllProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProductForVendor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/product/getAllProductForVendor/6814041185518cf47f8e581d?status=reject",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"getAllProductForVendor",
+								"6814041185518cf47f8e581d"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "reject"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMyProducts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "vendor eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTQwNDExODU1MThjZjQ3ZjhlNTgxZCIsImVtYWlsIjoibW9oYW1lZGxvdXRmeTE2NEBnbWFpbC5jb20iLCJpYXQiOjE3NDYxNDIzMTAsImV4cCI6MTc0Njc0NzExMH0.8haSVCS7JZmH1LlR-NvbsPyBtAovewq4X7dZ9WTgcvA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/product/getMyProducts?status=approved",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"getMyProducts"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "approved"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDYwMTQyNTksImV4cCI6MTc0NjYxOTA1OX0.wCKHOQfkiph3hKeiy0MvfLMszUFCoUrSn3h8NQYhUDM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/product/getProductById/681412434719023201cea6d9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"getProductById",
+								"681412434719023201cea6d9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "coupon",
+			"item": [
+				{
+					"name": "add coupon",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"doma\",\r\n    \"discountType\":\"percentage\",\r\n    \"discountValue\":\"30\",\r\n    \"minOrderValue\":\"1000\",\r\n    \"usageLimit\":\"5\",\r\n    \"expiresAt\":\"2025-06-30\",\r\n    \"storeNames\":[\"khaled store\",\"loutfy store\"]\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/coupon/addCoupon",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coupon",
+								"addCoupon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get coupons",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/coupon/getCoupon?search=domaaaa",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coupon",
+								"getCoupon"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "domaaaa"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all coupons for vendor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/coupon/getAllCouponsForVendor/6814041185518cf47f8e581d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coupon",
+								"getAllCouponsForVendor",
+								"6814041185518cf47f8e581d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get my coupons",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/coupon/getMyCoupons",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coupon",
+								"getMyCoupons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCouponById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/coupon/getCouponById/681b1edde10c7fe89f3eb796",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coupon",
+								"getCouponById",
+								"681b1edde10c7fe89f3eb796"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updated coupon",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"discountType\":\"percentage\",\r\n    \"discountValue\":\"70\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/coupon/updatedCoupon/681b1b5e84182b6097528bab",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coupon",
+								"updatedCoupon",
+								"681b1b5e84182b6097528bab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete coupon",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "vendor eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTQwNDExODU1MThjZjQ3ZjhlNTgxZCIsImVtYWlsIjoibW9oYW1lZGxvdXRmeTE2NEBnbWFpbC5jb20iLCJpYXQiOjE3NDYxNDIzMTAsImV4cCI6MTc0Njc0NzExMH0.8haSVCS7JZmH1LlR-NvbsPyBtAovewq4X7dZ9WTgcvA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/coupon/deleteCoupon/681b1b5e84182b6097528bab",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coupon",
+								"deleteCoupon",
+								"681b1b5e84182b6097528bab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deActivate coupon",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/coupon/deActivateCoupon/681b1bcd422858942a60ef8e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coupon",
+								"deActivateCoupon",
+								"681b1bcd422858942a60ef8e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reactivateCoupon",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmVmOGE5NGViYTQyOTBiNmM1NSIsImVtYWlsIjoiYWRoYW1oNjY2QGdtYWlsLmNvbSIsImlhdCI6MTc0NjE0MjkwNCwiZXhwIjoxNzQ2NzQ3NzA0fQ.IjNsUBxvjwJ7j-262mFgQVRhTKDgl8DtCFwzBr63qUI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/coupon/reactivateCoupon/681b1bcd422858942a60ef8e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coupon",
+								"reactivateCoupon",
+								"681b1bcd422858942a60ef8e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wishList",
+			"item": [
+				{
+					"name": "addProductToWishlist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"6819984a8d2602f1f3b41ed3\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/wishlist/addToWishlist",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wishlist",
+								"addToWishlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updated wishlist name",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldName\":\"doma2\",\r\n    \"newName\":\"doma\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/wishlist/updateWishlistName",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wishlist",
+								"updateWishlistName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove product",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"wishlistName\":\"doma\",\r\n    \"productId\":\"6819977808197578a4a6f52c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/wishlist/removeProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wishlist",
+								"removeProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMyWishlist",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/wishlist/getMyWishlist",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wishlist",
+								"getMyWishlist"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "doma",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteWishlist",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/wishlist/deleteWishlist/doma",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wishlist",
+								"deleteWishlist",
+								"doma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createEmptyOne",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"doood\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/wishlist/createEmptyOne",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wishlist",
+								"createEmptyOne"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "moveProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"6819977808197578a4a6f52c\",\r\n    \"from\":\"dodz\",\r\n    \"to\":\"doood\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/wishlist/moveProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"wishlist",
+								"moveProduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "addToCart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"6819977808197578a4a6f52c\",\r\n    \"quantity\":\"5\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cart/addToCart",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"addToCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeItem",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/cart/removeItem/6819977808197578a4a6f52c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"removeItem",
+								"6819977808197578a4a6f52c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/cart/getCart",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"getCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCartItemCount",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/cart/getCartItemCount",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"getCartItemCount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clearCart",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/cart/clearCart",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart",
+								"clearCart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "review",
+			"item": [
+				{
+					"name": "addReview",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"rating\":\"4\"\r\n    \r\n    //  \"comment\":\"اوردر فل الفل و حاجة زي الفل\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/review/addReview/6819977808197578a4a6f52c",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"review",
+								"addReview",
+								"6819977808197578a4a6f52c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateComment",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"perfect\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/review/updateComment/6819977808197578a4a6f52c/681d9ebe043ee55fb7f2f927",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"review",
+								"updateComment",
+								"6819977808197578a4a6f52c",
+								"681d9ebe043ee55fb7f2f927"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateRate",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rating\":\"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/review/updateRate/6819977808197578a4a6f52c/681da24017fcaff2b2801d1e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"review",
+								"updateRate",
+								"6819977808197578a4a6f52c",
+								"681da24017fcaff2b2801d1e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletecomment",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDY2ODM1MjcsImV4cCI6MTc0NzI4ODMyN30.NToc3g05YtNV2ZqzeYk4qcZUZ4osGhekrQfnUNMuUSg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/review/deleteComment/681da24017fcaff2b2801d1e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"review",
+								"deleteComment",
+								"681da24017fcaff2b2801d1e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getReviewsForProduct",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "createOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDczMjY5NzEsImV4cCI6MTc0NzkzMTc3MX0.0IfJbkukTT10UgF4BjBO2rowAlTzkoEflTO64vFHPpY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"01066917499\",\r\n    \"address\":\"alex sedi beshr\",\r\n    \"paymentMethod\":\"card\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/order/createOrder",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"createOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paymentWithStripe",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDczMjY5NzEsImV4cCI6MTc0NzkzMTc3MX0.0IfJbkukTT10UgF4BjBO2rowAlTzkoEflTO64vFHPpY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderId\":\"68263f4256e801c9cbd33e5f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/order/create_payment",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"create_payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancel orer",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "user eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MTIwYmJhOGE5NGViYTQyOTBiNmM0YiIsImVtYWlsIjoicmFmYWF0aDY2NkBnbWFpbC5jb20iLCJpYXQiOjE3NDczMjY5NzEsImV4cCI6MTc0NzkzMTc3MX0.0IfJbkukTT10UgF4BjBO2rowAlTzkoEflTO64vFHPpY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\":\"68263f4256e801c9cbd33e5f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/order/cancelOrder",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order",
+								"cancelOrder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
